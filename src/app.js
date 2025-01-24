@@ -37,7 +37,7 @@ app.use("/api/v1/productos", productosRoutes)
 app.use("/api/v1/usuarios", usuariosRoutes )
 
 //Vistas
-/* app.use("/", viewsRoutes) */
+app.use("/", viewsRoutes)
 
 //Todos los demás
 /* app.all("*", (req, res) =>{

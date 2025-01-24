@@ -1,0 +1,10 @@
+<script defer src="../../public/js/crudProductos.js"></script>
+
+{{>createform}}
+
+{{#if productos}}
+    {{>tablaProductos
+        productos = productos}}
+{{else}}
+<h1>No hay productos en la base de datos</h1>
+{{/if}}

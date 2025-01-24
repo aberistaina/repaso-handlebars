@@ -1,0 +1,62 @@
+<script defer src="../../public/js/autenticacion.js"></script>
+
+<div class="modal fade" id="createUserLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="tituloCrear">Inicio de sesión</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Pestañas Modal -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-formulario" data-bs-toggle="tab" data-bs-target="#contenido-formularioLogin" type="button" role="tab" aria-controls="contenido-formulario" aria-selected="true">Registrarme</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-otro" data-bs-toggle="tab" data-bs-target="#contenido-otroLogin" type="button" role="tab" aria-controls="contenido-otro" aria-selected="false">Ya Estoy Registrado</button>
+          </li>
+        </ul>
+
+        <!-- Pestaña Registro -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="contenido-formularioLogin" role="tabpanel" aria-labelledby="tab-formulario">
+            <form id="formRegistro">     
+                <label for="nombreRegistro" class="form-label pt-2">Nombre</label>
+                <input type="text"  class="form-control" name="nombre" id="nombreRegistro" required>
+
+                <label for="apellidoRegistro" class="form-label pt-2">Apellido</label>
+                <input type="text"  class="form-control" name="apellido" id="apellidoRegistro" required>
+
+                <label for="emailRegistro" class="form-label pt-2">Email</label>
+                <input type="text"  class="form-control" name="email" id="emailRegistro" required>
+
+                <label for="passwordRegistro"  class="form-label pt-2 d-block">Contraseña</label>
+                <input type="password" class="form-control w-75 d-inline-flex password" name="password" id="passwordRegistro" required>
+
+                <label for="passwordRegistroConfirm" class="form-label pt-2 d-block">Repite tu Contraseña</label>
+                <input type="password" data-target="input2" class="form-control w-75 d-inline-flex password" name="confirmPassword" id="passwordRegistroConfirm" required>
+                
+                <button class="btn btn-primary mt-3 d-flex" type="submit">Registrarme</button>
+            </form>
+          </div>
+
+        <!-- Pestaña Ya Estoy Registrado -->
+          <div class="tab-pane fade" id="contenido-otroLogin" role="tabpanel" aria-labelledby="tab-otro">
+            <form id="formLogin">
+                <label for="emailLogin" class="form-label pt-2">Email</label>
+                <input type="text"  class="form-control" name="email" id="emailLogin" required>
+                <label for="passwordLogin" class="form-label pt-2 d-block">Contraseña</label>
+                <input type="password" class="form-control w-75 d-inline-flex password" name="password" id="passwordLogin" required >
+                <button  class="btn btn-primary mt-3 d-flex" type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
